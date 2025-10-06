@@ -11,3 +11,17 @@ class Employee {
     return `${this.name} works in the ${this.department} department.`;
   }
 }
+
+// Step 3: Subclass Manager
+class Manager extends Employee {
+  constructor(name, department, teamSize) {
+    super(name, department); // Inherit name and department
+    this.teamSize = teamSize;
+  }
+
+  describe() {
+    // Override parent method
+    return `${this.name} manages the ${this.department} department with a team of ${this.teamSize} people.`;
+  }
+}
+
