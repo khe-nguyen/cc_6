@@ -28,5 +28,23 @@ class Manager extends Employee {
 // Step 4: Sample employees and managers
 const emp1 = new Employee("Diamond Clearwater", "Data Analyst");
 const emp2 = new Employee("Reese Crunch", "Finance");
-const mgr1 = new Manager("Mushroom Middle", "Engineering", 8);
-const mgr2 = new Manager("Alfajor Choco", "Sales", 5);
+const mgr1 = new Manager("Mushroom Middle", "Software Engineering", 8);
+const mgr2 = new Manager("Alfajor Choco", "Sales", 3);
+
+// Step 5: Company class
+class Company {
+  constructor() {
+    this.employees = [];
+  }
+
+  addEmployee(employee) {
+    this.employees.push(employee);
+  }
+
+  listEmployees() {
+    console.log("Company Employee List:");
+    for (let e of this.employees) {
+      console.log(e.describe());
+    }
+  }
+}
